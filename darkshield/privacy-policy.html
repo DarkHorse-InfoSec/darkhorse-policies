@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkShield - Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 48px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 28px;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+        .last-updated {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #2d3748;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        p, li { margin-bottom: 8px; font-size: 15px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        strong { color: #2d3748; }
+        .highlight {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DarkShield Privacy Policy</h1>
+        <p class="last-updated">Last updated: February 25, 2026</p>
+
+        <div class="highlight">
+            <strong>Summary:</strong> DarkShield processes email data locally in your browser. No email content is stored permanently. External API lookups (VirusTotal, Google Safe Browsing) are optional and can be fully disabled.
+        </div>
+
+        <h2>1. What Data We Process</h2>
+        <p>DarkShield analyzes the following data from emails displayed in your browser:</p>
+        <ul>
+            <li><strong>Email metadata:</strong> Sender address, display name, subject line</li>
+            <li><strong>Links:</strong> URLs contained in email bodies (checked for phishing indicators)</li>
+            <li><strong>Attachment metadata:</strong> File names, extensions, and sizes (files are not opened or downloaded)</li>
+            <li><strong>Email headers:</strong> SPF, DKIM, and DMARC authentication results</li>
+        </ul>
+
+        <h2>2. How Data Is Processed</h2>
+        <p>All core threat analysis runs <strong>locally in your browser</strong>. This includes:</p>
+        <ul>
+            <li>Phishing pattern detection</li>
+            <li>Homoglyph (lookalike domain) analysis</li>
+            <li>Social engineering and urgency language detection</li>
+            <li>Attachment risk scoring</li>
+            <li>Email authentication verification</li>
+        </ul>
+
+        <h2>3. External Services (Optional)</h2>
+        <p>When enabled (Balanced or Performance privacy mode), DarkShield may send limited data to third-party services:</p>
+        <ul>
+            <li><strong>VirusTotal:</strong> URL hashes may be sent for reputation checks. Your API key is stored locally and never shared.</li>
+            <li><strong>Google Safe Browsing:</strong> URL prefixes may be checked against Google's threat lists.</li>
+        </ul>
+        <p>You can disable all external lookups by selecting <strong>Strict</strong> privacy mode in Settings. In Strict mode, no data leaves your browser.</p>
+
+        <h2>4. Data Storage</h2>
+        <ul>
+            <li><strong>Settings and preferences:</strong> Stored locally using Chrome's storage API</li>
+            <li><strong>Scan statistics:</strong> Aggregate counts (emails scanned, threats detected) stored locally</li>
+            <li><strong>Threat cache:</strong> Temporary cache of analysis results stored in memory; cleared when the browser closes</li>
+            <li><strong>No email content is stored permanently</strong></li>
+        </ul>
+
+        <h2>5. Data We Do NOT Collect</h2>
+        <ul>
+            <li>Full email body content is not stored or transmitted</li>
+            <li>No personally identifiable information is collected</li>
+            <li>No telemetry or usage analytics are sent by default</li>
+            <li>No data is sold or shared with advertisers</li>
+            <li>No browsing history beyond email client pages is accessed</li>
+        </ul>
+
+        <h2>6. User Controls</h2>
+        <p>You have full control over your data:</p>
+        <ul>
+            <li><strong>Privacy modes:</strong> Choose Strict (local only), Balanced, or Performance</li>
+            <li><strong>Disable external lookups:</strong> Toggle off threat intelligence in Settings</li>
+            <li><strong>Clear data:</strong> All locally stored data can be cleared from Settings</li>
+            <li><strong>Uninstall:</strong> Removing the extension deletes all stored data</li>
+        </ul>
+
+        <h2>7. Permissions</h2>
+        <p>DarkShield requests the following browser permissions:</p>
+        <ul>
+            <li><strong>activeTab:</strong> Access the current tab to analyze visible emails</li>
+            <li><strong>storage:</strong> Save your settings and scan statistics locally</li>
+            <li><strong>scripting:</strong> Inject the email analysis UI into email clients</li>
+            <li><strong>webNavigation:</strong> Detect when you navigate to email pages</li>
+            <li><strong>notifications:</strong> Alert you to high-risk emails</li>
+            <li><strong>alarms:</strong> Schedule periodic threat intelligence updates</li>
+            <li><strong>Host access to Gmail and Outlook:</strong> Required to analyze emails in those clients</li>
+        </ul>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We will update this policy as needed. Material changes will be communicated through the extension's update notes.</p>
+
+        <h2>9. Contact</h2>
+        <p>For privacy questions or concerns, contact the DarkHorse InfoSec team via our <a href="https://github.com/darkhorse-infosec/darkshield" target="_blank">GitHub repository</a>.</p>
+    </div>
+</body>
+</html>
